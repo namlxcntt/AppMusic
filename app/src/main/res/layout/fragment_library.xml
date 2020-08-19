@@ -1,0 +1,161 @@
+<!--
+  ~ Copyright (c) 2020. Carlos René Ramos López. All rights reserved.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.dev.musicapp.ui.viewmodels.MainViewModel" />
+
+        <variable
+            name="didPermissionsGrant"
+            type="Boolean" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/transparent"
+                app:expandedTitleGravity="top"
+                app:layout_scrollFlags="scroll|snap">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/margin_6">
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignTop="@+id/option_selected"
+                        android:layout_alignBottom="@+id/option_selected"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/margin_12"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:src="@drawable/ic_music"
+                        app:tint="?subTitleTextColor" />
+
+                    <TextView
+                        android:id="@+id/option_selected"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="8dp"
+                        android:layout_marginStart="@dimen/margin_6"
+                        android:layout_toStartOf="@+id/search"
+                        android:layout_toEndOf="@id/icon"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:maxLines="1"
+                        android:text="@string/app_name"
+                        android:textColor="?subTitleTextColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/search"
+                        android:layout_width="@dimen/btn_size_header"
+                        android:layout_height="@dimen/btn_size_header"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:layout_toStartOf="@id/menu"
+                        android:background="@drawable/btn_ripple_header_with_background"
+                        android:contentDescription="@string/cover"
+                        android:onClick="search"
+                        android:src="@drawable/ic_search"
+                        android:tint="?subTitleTextColor" />
+
+
+                    <ImageButton
+                        android:id="@+id/menu"
+                        android:layout_width="@dimen/btn_size_header"
+                        android:layout_height="@dimen/btn_size_header"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:background="@drawable/btn_ripple_header_with_background"
+                        android:contentDescription="@string/cover"
+                        android:onClick="menu"
+                        android:src="@drawable/ic_more"
+                        android:tint="?subTitleTextColor" />
+                </RelativeLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <!--FIX app:tabMode="auto"-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabIndicator="@drawable/indicator"
+                    app:tabIndicatorColor="?colorAccent"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicatorHeight="4dp"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@color/transparent"
+                    app:tabSelectedTextColor="?colorAccent"
+                    app:tabTextAppearance="@style/TabLayoutTextAppearance" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager_sort_mode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/album_detail_shape"
+            android:elevation="1dp"
+            app:clipToOutline="@{true}"
+            android:theme="@style/OverScrollColor"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <TextView
+            android:id="@+id/no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:elevation="1dp"
+            android:text="@string/no_permission"
+            android:textColor="?titleTextColor"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            android:visibility="@{didPermissionsGrant ? View.GONE : View.VISIBLE}" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
+

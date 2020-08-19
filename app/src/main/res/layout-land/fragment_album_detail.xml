@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020. Carlos René Ramos López. All rights reserved.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.dev.musicapp.utils.GeneralUtils" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="album"
+            type="com.dev.musicapp.models.Album" />
+
+        <variable
+            name="mainViewModel"
+            type="com.dev.musicapp.ui.viewmodels.MainViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.dev.musicapp.ui.viewmodels.AlbumViewModel" />
+
+        <variable
+            name="totalDuration"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:background="@drawable/btn_ripple"
+                android:contentDescription="@string/cover"
+                android:onClick="back"
+                android:tint="?colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back" />
+
+            <ImageButton
+                android:id="@+id/add_favorites"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:background="@drawable/btn_ripple"
+                android:contentDescription="@string/cover"
+                android:src="@drawable/ic_no_favorite"
+                android:tint="?colorAccent"
+                app:isFav="@{mainViewModel.isAlbumFav(album.id)}"
+                app:layout_constraintEnd_toStartOf="@id/search"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/search"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:background="@drawable/btn_ripple"
+                android:contentDescription="@string/cover"
+                android:onClick="search"
+                android:src="@drawable/ic_search"
+                android:tint="?colorAccent"
+                app:layout_constraintEnd_toStartOf="@id/menu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/menu"
+                android:layout_width="@dimen/btn_size"
+                android:layout_height="@dimen/btn_size"
+                android:background="@drawable/btn_ripple"
+                android:contentDescription="@string/cover"
+                android:onClick="menu"
+                android:src="@drawable/ic_more"
+                android:tint="?colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/album_cover_frame"
+            android:contentDescription="@string/cover"
+            android:elevation="5dp"
+            android:src="@drawable/ic_empty_cover"
+            app:albumId="@{album.id}"
+            app:layout_constraintEnd_toEndOf="@id/info"
+            app:layout_constraintStart_toStartOf="@id/info"
+            app:layout_constraintTop_toBottomOf="@id/app_bar"
+            app:recycled="@{true}" />
+
+        <LinearLayout
+            android:id="@+id/info"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/global_padding_top"
+            android:layout_marginTop="@dimen/margin_12"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cover">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@{album.title}"
+                android:textColor="?titleTextColor"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/sub_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@{album.artist}"
+                android:textColor="?colorAccent"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="@{(album.year == 0 ? @string/unknown : String.valueOf(album.year))+' '+@string/separator+' '+GeneralUtils.INSTANCE.formatMilliseconds((long)totalDuration)}"
+                android:textColor="?bodyTextColor"
+                android:textSize="@dimen/sub_title_text_size" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/global_padding_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/info"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_songs"
+            android:textColor="?titleTextColor"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            android:visibility="@{viewModel.getSongsByAlbum(album.id).size > 0 ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/list"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

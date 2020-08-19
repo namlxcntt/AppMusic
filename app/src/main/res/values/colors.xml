@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Accent Color #DB5151 E34A4C 7874D1-->
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccentDark">@color/colorAccent</color>
+    <color name="colorAccentDarkOpacity">#800788F1</color>
+    <color name="colorPrimaryDarkSecondary">#000000</color>
+    <color name="colorPrimaryDarkSecondary2">#262626</color>
+    <color name="colorPrimaryDarkOpacity">#4D000000</color>
+    <color name="colorTitleTextDark">#FCFAFD</color>
+    <color name="colorSubTitleTextDark">#CECECE</color>
+    <color name="colorBodyTextDark">#8E8E8E</color>
+
+    <color name="colorPrimaryLight">#F2F2F2</color>
+    <color name="colorPrimaryDarkLight">#F2F2F2</color>
+    <color name="colorAccentLight">@color/colorAccent</color>
+    <color name="colorAccentLightOpacity">#800788F1</color>
+    <color name="colorPrimaryLightSecondary">#F2F2F2</color>
+    <color name="colorPrimaryLightSecondary2">#FCFCFC</color>
+    <color name="colorPrimaryLightOpacity">#F2F2F2</color>
+    <color name="colorTitleTextLight">#252525</color>
+    <color name="colorSubTitleTextLight">#626262</color>
+    <color name="colorBodyTextLight">#878787</color>
+
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="error">#dd4254</color>
+    <color name="success">#339A04</color>
+
+    <color name="colorAccent">#0788F1</color>
+    <color name="primary">#F2F2F2</color>
+    <color name="gray">#DDDDDD</color>
+
+    <color name="ic_launcher_background">#262626</color>
+
+
+
+    <color name="green">#43A047</color>
+    <color name="red">#BF2C2C</color>
+</resources>

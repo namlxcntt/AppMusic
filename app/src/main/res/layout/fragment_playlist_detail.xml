@@ -1,0 +1,122 @@
+<!--
+  ~ Copyright (c) 2020. Carlos René Ramos López. All rights reserved.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="playlist"
+            type="com.dev.musicapp.models.Playlist" />
+
+        <variable
+            name="viewModel"
+            type="com.dev.musicapp.ui.viewmodels.PlaylistViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary">
+
+        <include
+            layout="@layout/layout_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:background="@drawable/btn_ripple"
+            android:contentDescription="@string/cover"
+            android:onClick="back"
+            android:tint="?colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:background="@drawable/btn_ripple"
+            android:contentDescription="@string/cover"
+            android:onClick="search"
+            android:src="@drawable/ic_search"
+            android:tint="?colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/folder_list_container"
+            app:layout_constraintEnd_toStartOf="@id/menu"
+            app:layout_constraintTop_toTopOf="@+id/folder_list_container" />
+
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:background="@drawable/btn_ripple"
+            android:contentDescription="@string/cover"
+            android:onClick="menu"
+            android:src="@drawable/ic_more"
+            android:tint="?colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/folder_list_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/folder_list_container" />
+
+        <LinearLayout
+            android:id="@+id/folder_list_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/padding_12"
+            android:paddingBottom="@dimen/padding_12"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintEnd_toStartOf="@+id/search"
+            app:layout_constraintStart_toEndOf="@+id/back"
+            app:layout_constraintTop_toTopOf="@+id/back">
+
+            <TextView
+                style="@style/TitleTextAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@{playlist.name}"
+                android:textColor="?subTitleTextColor"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/song_item_size"
+            android:text="@string/no_songs"
+            android:textColor="?titleTextColor"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/list"
+            app:visible="@{!(viewModel.getSongs(playlist.id).size > 0)}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

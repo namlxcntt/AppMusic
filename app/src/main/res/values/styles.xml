@@ -1,0 +1,107 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppThemeParent" />
+
+    <style name="AppThemeParent.Light" parent="Theme.AppCompat.NoActionBar" />
+
+    <style name="AppThemeParent.Dark" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="AppTheme.Dark" parent="AppThemeParent.Dark">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimarySecondary">@color/colorPrimaryDarkSecondary</item>
+        <item name="colorPrimarySecondary2">@color/colorPrimaryDarkSecondary2</item>
+        <item name="colorPrimaryOpacity">@color/colorPrimaryDarkOpacity</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorAccent">@color/colorAccentDark</item>
+        <item name="colorAccentOpacity">@color/colorAccentDarkOpacity</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="titleTextColor">@color/colorTitleTextDark</item>
+        <item name="subTitleTextColor">@color/colorSubTitleTextDark</item>
+        <item name="bodyTextColor">@color/colorBodyTextDark</item>
+        <item name="btnTintColor">@color/colorTitleTextDark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="AppThemeParent.Light">
+        <item name="colorPrimary">@color/colorPrimaryDarkLight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryLight</item>
+        <item name="colorPrimarySecondary">@color/colorPrimaryLightSecondary</item>
+        <item name="colorPrimarySecondary2">@color/colorPrimaryLightSecondary2</item>
+        <item name="colorPrimaryOpacity">@color/colorPrimaryLightOpacity</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="colorAccentOpacity">@color/colorAccentLightOpacity</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="android:windowBackground">@color/colorPrimaryLight</item>
+        <item name="titleTextColor">@color/colorTitleTextLight</item>
+        <item name="subTitleTextColor">@color/colorSubTitleTextLight</item>
+        <item name="bodyTextColor">@color/colorBodyTextLight</item>
+        <item name="btnTintColor">@color/colorTitleTextLight</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="AppTheme.Auto" parent="AppThemeParent.Light">
+        <item name="colorPrimary">@color/colorPrimaryDarkLight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryLight</item>
+        <item name="colorPrimarySecondary">@color/colorPrimaryLightSecondary</item>
+        <item name="colorPrimarySecondary2">@color/colorPrimaryLightSecondary2</item>
+        <item name="colorPrimaryOpacity">@color/colorPrimaryLightOpacity</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="colorAccentOpacity">@color/colorAccentLightOpacity</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="android:windowBackground">@color/colorPrimaryLight</item>
+        <item name="titleTextColor">@color/colorTitleTextLight</item>
+        <item name="subTitleTextColor">@color/colorSubTitleTextLight</item>
+        <item name="bodyTextColor">@color/colorBodyTextLight</item>
+        <item name="btnTintColor">@color/colorTitleTextLight</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <!-- VIEW STYLES -->
+
+    <style name="TabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">?subTitleTextColor</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitleTextAppearance" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <style name="SearchStyle">
+        <item name="colorAccent">?colorAccent</item>
+    </style>
+
+    <style name="CustomCheckbox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:colorControlNormal">?bodyTextColor</item>
+        <item name="android:colorControlActivated">?colorAccent</item>
+        <item name="android:colorControlHighlight">?colorAccentOpacity</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+        <item name="android:textColor">?titleTextColor</item>
+    </style>
+
+    <style name="BottomSheetAlertTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <style name="OverScrollColor">
+        <item name="android:colorPrimary">?colorAccent</item>
+    </style>
+</resources>

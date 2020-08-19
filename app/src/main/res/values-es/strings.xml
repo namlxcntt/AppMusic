@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="song">Pista</string>
+    <string name="album">Álbum</string>
+    <string name="artist">Artista</string>
+    <string name="songs">Pistas</string>
+    <string name="albums">Álbumes</string>
+    <string name="artists">Artistas</string>
+    <string name="folders">Carpetas</string>
+    <string name="folder">Carpeta</string>
+    <string name="favorites">Favoritos</string>
+    <string name="equalizer">Ecualizador</string>
+    <string name="hint_msg">Buscar pistas, artistas y álbumes.</string>
+    <string name="library">Libreria</string>
+    <string name="lyrics">Letra</string>
+    <string name="no_results">Sin Resultados</string>
+    <string name="playlists">Listas de Reproducción</string>
+    <string name="search">Buscar</string>
+    <string name="settings">Ajustes</string>
+    <string name="sort_title">Ordenar</string>
+    <string name="sort_msg">Ordenar por</string>
+    <string name="sort_duration">Duración</string>
+    <string name="sort_last_added">Último Agregado</string>
+    <string name="sort_year">Año</string>
+    <string name="title">Título</string>
+    <string name="unknown">Desconosido</string>
+    <string name="now_playing">Reproduciendo Ahora</string>
+    <string name="new_playlist">Nueva Lista</string>
+    <string name="no_playlist">Sin Listas de Reproducción</string>
+    <string name="no_songs">Sin Pistas</string>
+    <string name="play">Reproducir</string>
+    <string name="add">Agregar</string>
+    <string name="share">Compartir</string>
+    <string name="delete">Eliminar</string>
+    <string name="create_playlist">Creando Lista de Reproducción</string>
+    <string name="choose_playlist">Por favor, selecciona una lista de reproducción.</string>
+    <string name="playlist_added_error">No se pudo crear la lista de reproducción \"%s\".</string>
+    <string name="playlist_added_success">Lista de reproducción agregada satisfactoriamente.</string>
+    <string name="input_hint">Ingresa el nombre</string>
+    <string name="no_permission">No se otorgaron permisos</string>
+    <string name="no_folders">Sin Carpetas</string>
+    <string name="remove">Quitar</string>
+    <string name="theme_title">Temas</string>
+    <string name="light_theme">Claro</string>
+    <string name="dark_theme">Obscuro</string>
+    <string name="appearance">Apariencia</string>
+    <string name="theme_description">Elige uno de estos temas para tu BeatPlayer.</string>
+    <string name="default_theme">Automático</string>
+    <string name="no_lyrics">Lo sentimos, no pudimos obtener la letra de esta canción.</string>
+    <string name="deleted_ok">Canción eliminada exitosamente.</string>
+    <string name="deleted_err">No se puede eliminar la canción ahora.</string>
+    <string name="unavailable">La canción no se puede reproducir.</string>
+    <string name="playlist">Lista de Reproducción</string>
+    <string name="delete_conf">Estas seguro que deseas eliminar la canción \"%s\" de tu dispositivo.</string>
+    <string name="delete_conf_title">Confirmar Eliminación</string>
+    <string name="select_tracks">Seleccionar Canciones</string>
+    <string name="all">Todo</string>
+    <string name="done">Hecho</string>
+    <string name="no_albums">Sin Albumes</string>
+    <string name="no_favorites">Sin Música Favorita</string>
+    <string name="favorites_tip">Toca el ícono del corazón que aparecerá en \"Reproduciendo Ahora, Álbumes, Artistas y Carpetas\". Tu música favorita aparecerá aquí.</string>
+    <string name="favorite_music">Música Favorita</string>
+    <string name="no_artists">Sin Artistas</string>
+    <string name="song_added_success">La pista fue agregada exitosamente.</string>
+    <string name="song_added_error">No se pudo agregar la pista a la lista de reproducción</string>
+    <string name="playlist_deleted_error">No se pudo eliminar la lista de reproducción \"%s\".</string>
+    <string name="playlist_deleted_success">La lista de reproducción \"%s\" fue eliminada exitosamente.</string>
+    <string name="retry">Reintentar</string>
+    <string name="song_no_fav_ok">Canción removida de tu música favorita.</string>
+    <string name="song_fav_ok">Canción agregada a tu música favorita.</string>
+    <string name="album_no_fav_ok">Álbum removido de tu música favorita.</string>
+    <string name="album_fav_ok">Álbum agregado a tu música favorita.</string>
+    <string name="folder_no_fav_ok">Carpeta removida de tu música favorita.</string>
+    <string name="folder_fav_ok">Carpeta agregada a tu música favorita.</string>
+    <string name="artist_no_fav_ok">Artista removido de tu música favorita.</string>
+    <string name="artist_fav_ok">Artista agregado a tu música favorita.</string>
+    <string name="playlist_name_error">El nombre de la lista de reproducción ya existe.</string>
+    <string name="settings_theme_description">Automático, Claro, Obscuro</string>
+    <string name="cancel">Cancelar</string>
+    <string name="accept">Aceptar</string>
+    <string name="search_tip">Escribe el nombre de un álbum, un artista o una canción y verás los resultados aquí.</string>
+    <string name="all_songs">Todas las pistas</string>
+    <string name="no_eq">Tu dispositivo no tiene ecualizador.</string>
+    <string name="playlist_tip">Crea algunas listas de reproducción y serán listadas aquí.</string>
+    <string name="op_err">Ha ocurrido un error.</string>
+    <string name="create_playlist_btn">Crear</string>
+    <string name="album_count">Cantidad de Albumes</string>
+    <string name="song_count">Cantidad de Pistas</string>
+    <string name="edit_lyrics">Editar Letra</string>
+    <string name="new_lyrics">Por favor, escribe ó pegua la nueva letra de la pista en la caja de texto inferior.</string>
+    <string name="edit_lyrics_hint">Ingresa la letra de la pista.</string>
+    <string name="empty_lyrics">Esta pista aún no tiene letra.</string>
+    <string name="save">Guardar</string>
+    <string name="lyrics_edit_error">Error al guardar la letra de la pista.</string>
+    <string name="sync_lyrics">Sincronizar Letra</string>
+    <string name="lyrics_type">¿Que quieres hacer?</string>
+    <string name="lyrics_tip">Por favor, selecciona la opcion que deseas utilizar.</string>
+
+    <plurals name="number_of_songs" tools:ignore="UnusedQuantity">
+        <item quantity="zero">%d Pistas</item>
+        <item quantity="one">%d Pista</item>
+        <item quantity="other">%d Pistas</item>
+    </plurals>
+
+    <plurals name="number_of_albums" tools:ignore="UnusedQuantity">
+        <item quantity="zero">%d Álbumes</item>
+        <item quantity="one">%d Álbum</item>
+        <item quantity="other">%d Álbumes</item>
+    </plurals>
+
+    <plurals name="number_of_artists" tools:ignore="UnusedQuantity">
+        <item quantity="zero">%d Artistas</item>
+        <item quantity="one">%d Artista</item>
+        <item quantity="other">%d Artistas</item>
+    </plurals>
+</resources>
