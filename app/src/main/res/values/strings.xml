@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">namlxcntt</string>
+    <string name="app_name" translatable="false">MusicApp</string>
     <string name="hint_msg">Search for songs, artists &amp; albums.</string>
     <string name="cover" translatable="false" />
     <string name="title">Title</string>

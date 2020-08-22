@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.florent37:kotlinpleaseanimate:1.0.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45c3b030ee2045378a6598bef0348e8a/jetified-kotlinpleaseanimate-1.0.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45c3b030ee2045378a6598bef0348e8a/jetified-kotlinpleaseanimate-1.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45c3b030ee2045378a6598bef0348e8a/jetified-kotlinpleaseanimate-1.0.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.florent37/kotlinpleaseanimate/1.0.2/ef4802886348c2c48594da4343b3e5c57249a7c2/kotlinpleaseanimate-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

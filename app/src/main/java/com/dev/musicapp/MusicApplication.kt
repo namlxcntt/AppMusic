@@ -12,7 +12,7 @@ import org.koin.core.context.startKoin
 import timber.log.Timber
 
 
-class MusicPlayerApplication : Application() {
+class MusicApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -33,7 +33,7 @@ class MusicPlayerApplication : Application() {
             utilsModule
         )
         startKoin {
-            androidContext(this@MusicPlayerApplication)
+            androidContext(this@MusicApplication)
             modules(modules)
         }
     }

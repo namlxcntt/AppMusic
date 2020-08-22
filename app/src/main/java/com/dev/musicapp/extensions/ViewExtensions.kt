@@ -1,15 +1,3 @@
-/*
- * Copyright (c) 2020. Carlos René Ramos López. All rights reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 package com.dev.musicapp.extensions
 
@@ -41,10 +29,10 @@ import com.google.android.material.tabs.TabLayout
 import rm.com.audiowave.AudioWaveView
 
 
-const val DEFAULT = "com.quanlv.musicplayer.DEFAULT"
-const val SUCCESS = "com.quanlv.musicplayer.SUCCESS"
-const val ERROR = "com.quanlv.musicplayer.ERROR"
-const val CUSTOM = "com.quanlv.musicplayer.CUSTOM"
+const val DEFAULT = "com.dev.musicapp.DEFAULT"
+const val SUCCESS = "com.dev.musicapp.SUCCESS"
+const val ERROR = "com.dev.musicapp.ERROR"
+const val CUSTOM = "com.dev.musicapp.CUSTOM"
 
 fun <T : ViewDataBinding> ViewGroup.inflateWithBinding(
     @LayoutRes layoutRes: Int,

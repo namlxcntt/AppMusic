@@ -1,10 +1,12 @@
 package com.dev.musicapp.ui.activities
 
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.media.session.PlaybackStateCompat.*
 import android.view.View
+import androidx.core.app.ActivityCompat
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import com.dev.musicapp.R
@@ -41,16 +43,18 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         init(savedInstanceState)
+        requestPermissions()
 
     }
 
-//    private fun requestPermissions(){
-//        val permissions = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE,
-//            Manifest.permission.READ_EXTERNAL_STORAGE,
-//            Manifest.permission.WAKE_LOCK,
-//            Manifest.permission.INTERNET)
-//        ActivityCompat.requestPermissions(this,permissions,0)
-//    }
+    private fun requestPermissions(){
+        val permissions = arrayOf(
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WAKE_LOCK,
+            Manifest.permission.INTERNET)
+        ActivityCompat.requestPermissions(this,permissions,0)
+    }
 
     override fun onStop() {
         super.onStop()

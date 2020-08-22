@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 
-package com.quanlv.musicplayer.interfaces
+package com.dev.musicapp.interfaces
 
 import com.dev.musicapp.alertdialog.actions.AlertItemAction
 

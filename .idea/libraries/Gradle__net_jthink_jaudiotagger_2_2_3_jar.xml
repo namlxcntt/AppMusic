@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: net.jthink:jaudiotagger:2.2.3@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jthink/jaudiotagger/2.2.3/f2beba500449b3a31fbbec1b9925a3206fe0c36d/jaudiotagger-2.2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jthink/jaudiotagger/2.2.3/5069d831985168b1056db8378f1403bd3614ade4/jaudiotagger-2.2.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jthink/jaudiotagger/2.2.3/bbaa716806415a517145d43ef582c667bbc115f4/jaudiotagger-2.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.alxrm:audiowave-progressbar:0.9.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2edd6d9e73856724016f15295add384/jetified-audiowave-progressbar-0.9.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2edd6d9e73856724016f15295add384/jetified-audiowave-progressbar-0.9.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.alxrm/audiowave-progressbar/0.9.2/192d27760247f812dff04baeb75d046d6f3e0a89/audiowave-progressbar-0.9.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
