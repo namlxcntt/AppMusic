@@ -1,30 +1,19 @@
-/*
- * Copyright (c) 2020. Carlos René Ramos López. All rights reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
-package com.dev.musicapp.alertdialog.views
+
+package com.dev.musicapp.customalertdialog.views
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import com.dev.musicapp.R
-import com.dev.musicapp.alertdialog.actions.AlertItemAction
-import com.dev.musicapp.alertdialog.enums.AlertItemTheme
-import com.dev.musicapp.alertdialog.extensions.addOnWindowFocusChangeListener
-import com.dev.musicapp.alertdialog.stylers.AlertItemStyle
-import com.dev.musicapp.alertdialog.stylers.base.ItemStyle
-import com.dev.musicapp.alertdialog.utils.ViewUtils.drawRoundRectShape
+import com.dev.musicapp.customalertdialog.actions.AlertItemAction
+import com.dev.musicapp.customalertdialog.enums.AlertItemTheme
+import com.dev.musicapp.customalertdialog.extensions.addOnWindowFocusChangeListener
+import com.dev.musicapp.customalertdialog.stylers.AlertItemStyle
+import com.dev.musicapp.customalertdialog.stylers.base.ItemStyle
+import com.dev.musicapp.customalertdialog.utils.ViewUtils.drawRoundRectShape
 
-import com.dev.musicapp.alertdialog.views.base.DialogFragmentBase
+import com.dev.musicapp.customalertdialog.views.base.DialogFragmentBase
 import kotlinx.android.synthetic.main.parent_dialog_layout.view.*
 
 class DialogAlert : DialogFragmentBase() {

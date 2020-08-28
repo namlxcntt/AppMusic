@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dev.musicapp.R
-import com.dev.musicapp.alertdialog.actions.AlertItemAction
-import com.dev.musicapp.alertdialog.enums.AlertItemTheme
+import com.dev.musicapp.customalertdialog.actions.AlertItemAction
+import com.dev.musicapp.customalertdialog.enums.AlertItemTheme
 import com.dev.musicapp.databinding.FragmentLyricBinding
 import com.dev.musicapp.extensions.*
 

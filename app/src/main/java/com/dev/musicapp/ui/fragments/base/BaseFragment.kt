@@ -12,12 +12,12 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import com.dev.musicapp.R
-import com.dev.musicapp.alertdialog.AlertDialog
-import com.dev.musicapp.alertdialog.actions.AlertItemAction
-import com.dev.musicapp.alertdialog.enums.AlertItemTheme
-import com.dev.musicapp.alertdialog.enums.AlertType
-import com.dev.musicapp.alertdialog.stylers.AlertItemStyle
-import com.dev.musicapp.alertdialog.stylers.InputStyle
+import com.dev.musicapp.customalertdialog.AlertDialog
+import com.dev.musicapp.customalertdialog.actions.AlertItemAction
+import com.dev.musicapp.customalertdialog.enums.AlertItemTheme
+import com.dev.musicapp.customalertdialog.enums.AlertType
+import com.dev.musicapp.customalertdialog.stylers.AlertItemStyle
+import com.dev.musicapp.customalertdialog.stylers.InputStyle
 import com.dev.musicapp.extensions.*
 import com.dev.musicapp.ui.viewmodels.*
 
@@ -48,7 +48,7 @@ import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 open class BaseFragment<T : MediaItem> : CoroutineFragment(), ItemClickListener<T> {
 
-    protected lateinit var dialog: com.dev.musicapp.alertdialog.AlertDialog
+    protected lateinit var dialog: com.dev.musicapp.customalertdialog.AlertDialog
     protected val mainViewModel by inject<MainViewModel>()
     protected val songDetailViewModel by sharedViewModel<SongDetailViewModel>()
     protected var powerMenu: PowerMenu? = null
@@ -78,7 +78,7 @@ open class BaseFragment<T : MediaItem> : CoroutineFragment(), ItemClickListener<
             backgroundColor =
                 activity?.getColorByTheme(R.attr.colorPrimarySecondary2)!!
         }
-        val alert = com.dev.musicapp.alertdialog.AlertDialog(
+        val alert = com.dev.musicapp.customalertdialog.AlertDialog(
             getString(R.string.playlists),
             getString(R.string.choose_playlist),
             style,
@@ -164,7 +164,7 @@ open class BaseFragment<T : MediaItem> : CoroutineFragment(), ItemClickListener<
             backgroundColor = safeActivity.getColorByTheme(R.attr.colorPrimarySecondary2)
             cornerRadius = resources.getDimension(R.dimen.bottom_panel_radius)
         }
-        return com.dev.musicapp.alertdialog.AlertDialog(
+        return com.dev.musicapp.customalertdialog.AlertDialog(
             titleText,
             subTitleText,
             style,

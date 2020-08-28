@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dev.musicapp.R
-import com.dev.musicapp.alertdialog.actions.AlertItemAction
-import com.dev.musicapp.alertdialog.enums.AlertItemTheme
+import com.dev.musicapp.customalertdialog.actions.AlertItemAction
+import com.dev.musicapp.customalertdialog.enums.AlertItemTheme
 import com.dev.musicapp.databinding.FragmentAlbumBinding
 import com.dev.musicapp.extensions.*
 

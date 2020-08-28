@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.dev.musicapp.R
-import com.dev.musicapp.alertdialog.AlertDialog
-import com.dev.musicapp.alertdialog.actions.AlertItemAction
-import com.dev.musicapp.alertdialog.enums.AlertItemTheme
-import com.dev.musicapp.alertdialog.enums.AlertType
-import com.dev.musicapp.alertdialog.stylers.AlertItemStyle
+import com.dev.musicapp.customalertdialog.AlertDialog
+import com.dev.musicapp.customalertdialog.actions.AlertItemAction
+import com.dev.musicapp.customalertdialog.enums.AlertItemTheme
+import com.dev.musicapp.customalertdialog.enums.AlertType
+import com.dev.musicapp.customalertdialog.stylers.AlertItemStyle
 import com.dev.musicapp.databinding.ActivitySettingsBinding
 import com.dev.musicapp.extensions.getColorByTheme
 import com.dev.musicapp.ui.activities.base.BaseActivity

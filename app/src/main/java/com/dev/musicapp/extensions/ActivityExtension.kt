@@ -1,5 +1,4 @@
 
-
 package com.dev.musicapp.extensions
 
 import android.app.Activity

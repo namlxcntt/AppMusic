@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.musicapp.R
-import com.dev.musicapp.alertdialog.utils.ViewUtils.dip2px
+import com.dev.musicapp.customalertdialog.utils.ViewUtils.dip2px
 import com.dev.musicapp.databinding.FavoriteItemBinding
 import com.dev.musicapp.extensions.inflateWithBinding
 
